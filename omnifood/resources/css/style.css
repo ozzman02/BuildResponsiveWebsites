@@ -8,7 +8,7 @@ html {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 300px;
+    font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
@@ -29,10 +29,61 @@ header{
     position: absolute;
     width: 1140px;
     top: 50%;
-    left: 50px;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
     margin: 0;
+    color: #fff;
+    font-size: 240%; /*relative to font-size set in the html rule*/
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
+
+.btn:link,
+.btn:visited {
+    /*An inline element does not start on a new line and only takes up as much width as necessary.*/
+    /*inline-block elements are like inline elements but they can have a width and a height.*/
+    display: inline-block;
+    padding: 10px 30px; /*10px top and bottom, 30px left and right*/
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
