@@ -101,8 +101,10 @@ h3 {
 /* ------ BUTTONS ------*/
 .btn:link,
 .btn:visited {
-    /*An inline element does not start on a new line and only takes up as much width as necessary.*/
-    /*inline-block elements are like inline elements but they can have a width and a height.*/
+    /*
+        An inline element does not start on a new line and only takes up as much width as necessary.
+        inline-block elements are like inline elements but they can have a width and a height.
+    */
     display: inline-block;
     padding: 10px 30px; /*10px top and bottom, 30px left and right*/
     font-weight: 300;
@@ -157,6 +159,11 @@ header{
     width: 1140px;
     top: 50%;
     left: 50%;
+
+    /*
+        The transform property applies a 2D or 3D transformation to an element.
+        This property allows you to rotate, scale, move, skew, etc., elements.
+    */
     transform: translate(-50%, -50%);
 }
 
@@ -186,6 +193,11 @@ header{
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+
+    /*
+        CSS transitions allows you to change property values smoothly (from one value to another),
+        over a given duration.
+    */
     transition: border-bottom 0.2s;
 }
 
@@ -195,8 +207,20 @@ header{
 }
 
 /*----------------------------------------------------------------------------------------*/
+/* FEATURES */
+/*----------------------------------------------------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/*----------------------------------------------------------------------------------------*/
 /* MEALS */
 /*----------------------------------------------------------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
 
 .meals-showcase {
     list-style: none;
@@ -204,6 +228,10 @@ header{
 }
 
 .meals-showcase li {
+    /*
+        Displays an element as a block element (like <p>). It starts on a new
+        line, and takes up the whole width
+    */
     display: block;
     float: left;
     width: 25%;
@@ -212,9 +240,23 @@ header{
 .meal-photo {
     width: 100%;
     margin: 0;
+
+    /*
+        The CSS overflow property controls what happens to content that is too big to fit into an area.
+    */
+    overflow: hidden;
+    background-color: #000;
 }
 
-.meal-photo {
+.meal-photo img {
+    opacity: 0.7;
     width: 100%;
-    height: auto
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
